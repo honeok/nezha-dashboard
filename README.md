@@ -9,6 +9,7 @@
 </div>
 
 <div align="center">
+  <a href="https://github.com/honeok/nezha-dashboard"><img src="https://img.shields.io/github/actions/workflow/status/honeok/nezha-dashboard/nezha-dashboard.yml?branch=master&logo=github&style=flat-square" alt="CI workflow"></a>
   <a href="https://hub.docker.com/r/honeok/nezha-dashboard"><img src="https://img.shields.io/docker/pulls/honeok/nezha-dashboard.svg?style=flat-square" alt="Docker Pulls"></a>
   <a href="https://hub.docker.com/r/honeok/nezha-dashboard"><img src="https://img.shields.io/docker/image-size/honeok/nezha-dashboard.svg?style=flat-square" alt="Docker Image Size"></a>
   <a href="https://hub.docker.com/r/honeok/nezha-dashboard"><img src="https://img.shields.io/docker/v/honeok/nezha-dashboard.svg?style=flat-square" alt="Docker Image Version"></a>
@@ -29,6 +30,10 @@ docker pull honeok/nezha-dashboard
 ```
 
 It can be found at [Docker Hub][1] and view the build records on [GitHub][2].
+
+## Special Thanks
+
+- [IPInfo][3] for providing an accurate GeoIP Database.
 
 ## Acknowledgements
 
@@ -97,9 +102,6 @@ All developers of the Nezha Probe project.
 <a href="https://github.com/wwng2333" title=":D"><img src="https://avatars.githubusercontent.com/u/17147265?v=4" width="50;" alt=":D"/></a>
 <a href="https://github.com/wellcoming" title="Coming"><img src="https://avatars.githubusercontent.com/u/74850890?v=4" width="50;" alt="Coming"/></a><!--GAMFC_DELIMITER_END-->
 
-## Special Thanks
-
-- [IPInfo](https://ipinfo.io) for providing an accurate GeoIP Database.
-
 [1]: https://hub.docker.com/r/honeok/nezha-dashboard
 [2]: https://github.com/honeok/nezha-dashboard
+[3]: https://ipinfo.io
