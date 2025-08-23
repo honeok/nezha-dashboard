@@ -9,10 +9,10 @@
 </div>
 
 <div align="center">
-  <a href="https://github.com/honeok/nezha-dashboard"><img src="https://img.shields.io/github/actions/workflow/status/honeok/nezha-dashboard/nezha-dashboard.yml?branch=master&logo=github&style=flat-square" alt="CI workflow"></a>
-  <a href="https://hub.docker.com/r/honeok/nezha-dashboard"><img src="https://img.shields.io/docker/pulls/honeok/nezha-dashboard.svg?style=flat-square" alt="Docker Pulls"></a>
-  <a href="https://hub.docker.com/r/honeok/nezha-dashboard"><img src="https://img.shields.io/docker/image-size/honeok/nezha-dashboard.svg?style=flat-square" alt="Docker Image Size"></a>
-  <a href="https://hub.docker.com/r/honeok/nezha-dashboard"><img src="https://img.shields.io/docker/v/honeok/nezha-dashboard.svg?style=flat-square" alt="Docker Image Version"></a>
+  <img src="https://img.shields.io/github/actions/workflow/status/honeok/nezha-dashboard/nezha-dashboard.yml?branch=master&logo=github&style=flat-square" alt="Build Status" />
+  <img src="https://img.shields.io/docker/pulls/honeok/nezha-dashboard.svg?style=flat-square" alt="Docker Pulls" />
+  <img src="https://img.shields.io/docker/image-size/honeok/nezha-dashboard.svg?style=flat-square" alt="Docker Image Size" />
+  <img src="https://img.shields.io/docker/v/honeok/nezha-dashboard.svg?style=flat-square" alt="Docker Image Version" />
 </div>
 
 ## Purpose
