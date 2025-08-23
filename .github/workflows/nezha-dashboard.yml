@@ -6,13 +6,17 @@ on:
     - cron: '0 16 1 * *'
   workflow_dispatch:
 
+permissions:
+  actions: write
+  contents: read
+
 defaults:
   run:
     shell: bash
 
 env:
   IPINFO_TOKEN: ${{ secrets.IPINFO_TOKEN }}
-  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+  DOCKER_USERNAME: ${{ github.repository_owner }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
 jobs:
@@ -98,3 +102,20 @@ jobs:
           build-args: NEZHA_VERSION=${{ env.NEZHA_VERSION }}
           tags: "${{ env.DOCKER_USERNAME }}/nezha-dashboard:${{ env.NEZHA_VERSION }}"
           push: true
+
+  cleaning_workflow:
+    name: 'Cleaning up old workflows'
+    needs:
+      - build_v0
+      - build_v1
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Delete old workflow runs'
+        uses: Mattraks/delete-workflow-runs@v2.0.6
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: 0
+          delete_run_by_conclusion_pattern: "cancelled, skipped, success"
