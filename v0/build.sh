@@ -12,7 +12,7 @@ sed -i 's#https://unpkg.com/semantic-ui@2.4.0/dist/semantic.min.js#https://cdnjs
 sed -i 's#https://unpkg.com/vue@2.6.14/dist/vue.min.js#https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js#g' resource/template/common/footer.html
 
 sed -i 's#https://unpkg.com/semantic-ui@2.4.0/dist/semantic.min.css#https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.0/semantic.min.css#g' resource/template/common/header.html
-sed -i 's#https://unpkg.com/font-logos@0.17.0/assets/font-logos.css#https://registry.npmmirror.com/font-logos/0.17.0/files/assets/font-logos.css#g' resource/template/common/header.html
+sed -i 's#https://unpkg.com/font-logos@0.17.0/assets/font-logos.css#https://cdnjs.cloudflare.com/ajax/libs/font-logos/0.17/font-logos.css#g' resource/template/common/header.html
 
 ## dashboard-default
 if [ -f resource/template/dashboard-default/file.html ]; then
@@ -35,7 +35,7 @@ sed -i 's#https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/semantic-ui/2.4.1/sem
 sed -i 's#https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/vue/2.6.14/vue.min.js#https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js#g' resource/template/theme-angel-kanade/footer.html
 
 sed -i 's#https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/semantic-ui/2.4.1/semantic.min.css#https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css#g' resource/template/theme-angel-kanade/header.html
-sed -i 's#https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-logos/0.17/font-logos.min.css#https://registry.npmmirror.com/font-logos/0.17.0/files/assets/font-logos.css#g' resource/template/theme-angel-kanade/header.html
+sed -i 's#https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-logos/0.17/font-logos.min.css#https://cdnjs.cloudflare.com/ajax/libs/font-logos/0.17/font-logos.css#g' resource/template/theme-angel-kanade/header.html
 sed -i 's#https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css#https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.css#g' resource/template/theme-angel-kanade/header.html
 
 sed -i 's#https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/flag-icon-css/4.1.5/flags/1x1/#https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.5/flags/1x1/#g' resource/template/theme-angel-kanade/home.html
@@ -58,7 +58,7 @@ sed -i 's#https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.m
 
 ## theme-default
 sed -i 's#https://unpkg.com/semantic-ui@2.4.0/dist/semantic.min.css#https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.0/semantic.min.css#g' resource/template/theme-default/header.html
-sed -i 's#https://unpkg.com/font-logos@0.17.0/assets/font-logos.css#https://registry.npmmirror.com/font-logos/0.17.0/files/assets/font-logos.css#g' resource/template/theme-default/header.html
+sed -i 's#https://unpkg.com/font-logos@0.17.0/assets/font-logos.css#https://cdnjs.cloudflare.com/ajax/libs/font-logos/0.17/font-logos.css#g' resource/template/theme-default/header.html
 sed -i 's#https://unpkg.com/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css#https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css#g' resource/template/theme-default/header.html
 sed -i 's#https://unpkg.com/flag-icons@7.2.3/css/flag-icons.min.css#https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.2.3/css/flag-icons.min.css#g' resource/template/theme-default/header.html
 sed -i 's#https://unpkg.com/jquery@3.7.1/dist/jquery.min.js#https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js#g' resource/template/theme-default/header.html
@@ -100,7 +100,7 @@ sed -i 's#https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.m
 sed -i 's#https://unpkg.com/bootstrap@3.4.1/dist/css/bootstrap.min.css#https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css#g' resource/template/theme-server-status/header.html
 sed -i 's#https://unpkg.com/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css#https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap-theme.min.css#g' resource/template/theme-server-status/header.html
 sed -i 's#https://unpkg.com/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css#https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css#g' resource/template/theme-server-status/header.html
-sed -i 's#https://unpkg.com/font-logos@0.17.0/assets/font-logos.css#https://registry.npmmirror.com/font-logos/0.17.0/files/assets/font-logos.css#g' resource/template/theme-server-status/header.html
+sed -i 's#https://unpkg.com/font-logos@0.17.0/assets/font-logos.css#https://cdnjs.cloudflare.com/ajax/libs/font-logos/0.17/font-logos.css#g' resource/template/theme-server-status/header.html
 sed -i 's#https://unpkg.com/flag-icons@7.2.3/css/flag-icons.min.css#https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.2.3/css/flag-icons.min.css#g' resource/template/theme-server-status/header.html
 sed -i 's#https://unpkg.com/semantic-ui@2.4.0/dist/semantic.min.css#https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.0/semantic.min.css#g' resource/template/theme-server-status/header.html
 sed -i 's#https://unpkg.com/jquery@3.7.1/dist/jquery.min.js#https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js#g' resource/template/theme-server-status/header.html
