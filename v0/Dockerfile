@@ -18,8 +18,8 @@ ENV CGO_CFLAGS="-D_LARGEFILE64_SOURCE=1"
 RUN set -ex \
     && apk add --update --no-cache git gcc musl-dev \
     && git clone --depth=1 --branch ${NEZHA_VERSION} https://github.com/nezhahq/nezha.git .
-COPY geoip.db /go/src/github.com/naiba/nezha/pkg/geoip/geoip.db
-COPY build.sh /go/src/github.com/naiba/nezha/build.sh
+COPY geoip.db pkg/geoip/geoip.db
+COPY build.sh .
 RUN set -ex \
     && chmod +x build.sh && ./build.sh \
     && go mod tidy -v \
