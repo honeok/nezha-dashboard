@@ -112,7 +112,6 @@ jobs:
           images: ${{ env.DOCKER_USERNAME }}/nezha-dashboard
           tags: |
             type=raw,value=${{ steps.bump_version.outputs.version }}
-            type=raw,value=latest
 
       - name: 'Build and Push nezha-dashboard image'
         uses: docker/build-push-action@v6
