@@ -18,7 +18,7 @@ permissions:
 
 defaults:
   run:
-    shell: bash -ex {0}
+    shell: bash
 
 env:
   IPINFO_TOKEN: ${{ secrets.IPINFO_TOKEN }}
@@ -79,7 +79,7 @@ jobs:
           x: false
           race: false
           tags: timetzdata
-          ldflags: -s -w -buildid= --extldflags '-static -fpic' -X github.com/naiba/nezha/service/singleton.Version=${{ steps.bump_version.outputs.version }}
+          ldflags: -s -w --extldflags '-static -fpic' -X github.com/naiba/nezha/service/singleton.Version=${{ steps.bump_version.outputs.version }}
           buildmode: default
           trimpath: true
           working_dir: ${{ GITHUB.WORKSPACE }}/v0/source
@@ -94,7 +94,7 @@ jobs:
               PACKAGE_NAME="dashboard-${{ steps.bump_version.outputs.version }}-${PLATFORM}"
               mkdir "$PACKAGE_NAME"
               cp "$FILE" "${PACKAGE_NAME}/dashboard"
-              sha256sum "${PACKAGE_NAME}/dashboard" | sed 's| .*| dashboard|' > "${PACKAGE_NAME}/dashboard.sha256sum"
+              sha256sum "${PACKAGE_NAME}/dashboard" | sed 's| .*| dashboard|' > "${PACKAGE_NAME}/checksum.txt"
               wget -qO "${PACKAGE_NAME}/LICENSE" https://www.apache.org/licenses/LICENSE-2.0.txt
               tar cfz "${PACKAGE_NAME}.tar.gz" "$PACKAGE_NAME"
               rm -rf "$PACKAGE_NAME"
