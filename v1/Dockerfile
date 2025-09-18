@@ -26,10 +26,10 @@ RUN set -ex \
     && swag init --pd -d . -g ./cmd/dashboard/main.go -o ./cmd/dashboard/docs --parseGoList=false \
     && go mod tidy -v \
     && go build -v -trimpath -ldflags="\
-    -s -w -buildid= \
-    -X 'github.com/nezhahq/nezha/service/singleton.Version=${NEZHA_VERSION#v}' \
-    -extldflags '-static -fpic' \
-    " -o /go/bin/dashboard ./cmd/dashboard
+        -s -w -buildid= \
+        -extldflags '-static -fpic' \
+        -X 'github.com/nezhahq/nezha/service/singleton.Version=${NEZHA_VERSION#v}' \
+        " -o /go/bin/dashboard ./cmd/dashboard
 
 FROM ghcr.io/nezhahq/nezha:${NEZHA_VERSION} AS dist
 LABEL maintainer="honeok <i@honeok.com>"
