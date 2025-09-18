@@ -24,10 +24,10 @@ RUN set -ex \
     && chmod +x build.sh && ./build.sh \
     && go mod tidy -v \
     && go build -v -trimpath -ldflags="\
-    -s -w -buildid= \
-    -X 'github.com/naiba/nezha/service/singleton.Version=${NEZHA_VERSION#v}' \
-    -extldflags '-static -fpic' \
-    " -o /go/bin/dashboard ./cmd/dashboard
+        -s -w -buildid= \
+        -extldflags '-static -fpic' \
+        -X 'github.com/naiba/nezha/service/singleton.Version=${NEZHA_VERSION#v}' \
+        " -o /go/bin/dashboard ./cmd/dashboard
 
 FROM ghcr.io/naiba/nezha-dashboard:${NEZHA_VERSION} AS dist
 LABEL maintainer="honeok <i@honeok.com>"
